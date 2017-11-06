@@ -1,0 +1,4 @@
+This is a dummy log file for testing purposes on ansone machine originally.
+This file may be sent via ansible to other machines.
+If you see this file on any other machine, it is probably executed via ansible on ansone machine.
+Cheers !!!
