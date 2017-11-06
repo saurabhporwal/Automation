@@ -1,0 +1,13 @@
+---
+- name: Transfer and execute a script.
+  hosts: anstwo
+  user: root
+  sudo: yes
+  tasks:
+     - name: Transfer the script
+       copy: src=/data/Automation/scripts/bitbucket.sh dest=/data/remote/bitbucket.sh mode=0777
+
+     - name: Execute the script
+       command: sh /data/remote/bitbucket.sh
+       become: true
+       become_user: root

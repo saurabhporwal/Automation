@@ -1,0 +1,13 @@
+---
+- name: Transfer and execute a script.
+  hosts: anstwo
+  user: root
+  sudo: yes
+  tasks:
+     - name: Transfer the script
+       copy: src=/data/Automation/scripts/nexus.sh dest=/data/remote/nexus.sh mode=0777
+
+     - name: Execute the script
+       command: sh /data/remote/nexus.sh
+       become: true
+       become_user: root
